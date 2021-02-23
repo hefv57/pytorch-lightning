@@ -23,26 +23,6 @@ from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 from pytorch_lightning.profiler.profilers import PassThroughProfiler, SimpleProfiler
 
 
-def test_v1_3_0_deprecated_arguments(tmpdir):
-
-    # Deprecate auto mode
-    with pytest.deprecated_call(match='will be removed in v1.3'):
-        ModelCheckpoint(mode='auto')
-
-    with pytest.deprecated_call(match='will be removed in v1.3'):
-        EarlyStopping(mode='auto')
-
-    with pytest.deprecated_call(match="The setter for self.hparams in LightningModule is deprecated"):
-
-        class DeprecatedHparamsModel(LightningModule):
-
-            def __init__(self, hparams):
-                super().__init__()
-                self.hparams = hparams
-
-        DeprecatedHparamsModel({})
-
-
 def test_v1_3_0_deprecated_metrics():
     from pytorch_lightning.metrics.functional.classification import to_onehot
     with pytest.deprecated_call(match='will be removed in v1.3'):

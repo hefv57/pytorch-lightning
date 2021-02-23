@@ -18,7 +18,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Removed
 
-- Removed deprecated `ModelCheckpoint` arguments `prefix`
+- Removed deprecated `ModelCheckpoint` arguments `prefix`, `mode="auto"`
 
 
 ### Fixed
