@@ -18,8 +18,7 @@ from unittest import mock
 import pytest
 import torch
 
-from pytorch_lightning import LightningModule, Trainer
-from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
+from pytorch_lightning import Trainer
 from pytorch_lightning.profiler.profilers import PassThroughProfiler, SimpleProfiler
 
 
